@@ -1,0 +1,22 @@
+{
+  "name": "atividade-extencionista",
+  "version": "1.0.0",
+  "description": "Este código é um exemplo de um aplicativo Node.js que utiliza as tecnologias Express, Handlebars, MongoDB e autenticação com Passport.js para criar um blog:",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^8.0.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  }
+}
