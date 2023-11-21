@@ -1,21 +1,27 @@
 <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="/">EcoMap</a>
+  <a class="navbar-brand m-3" href="/">EcoMap</a>
   <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="/categorias" style="color: rgb(244, 242, 242);">Postagens</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/" style="color: rgb(244, 242, 242);">Download</a>
-    </li>
-    {{#if user}}
-    <li class="nav-item">
-      <a class="nav-link" href="/usuarios/logout" style="color: rgb(244, 242, 242);">Sair</a>
-    </li>
-    {{else}}
-    <li class="nav-item">
-      <a class="nav-link" href="/usuarios/registros" style="color: rgb(244, 242, 242);">Criar conta</a>
-    </li>
-    {{/if}}
+      <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/categorias" style="color: rgb(244, 242, 242);">Postagens</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/" style="color: rgb(244, 242, 242);">Download</a>
+      </li>
+      {{#if user}}
+      <li class="nav-item">
+          <a class="nav-link" href="/" style="color: rgb(244, 242, 242);">Monitoramento</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/usuarios/logout" style="color: rgb(244, 242, 242);">Sair</a>
+      </li>
+      {{else}}
+      <li class="nav-item">
+          <a class="nav-link" href="/usuarios/registros" style="color: rgb(244, 242, 242);">Criar conta</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="usuarios/loguin" style="color: rgb(244, 242, 242);">login</a>
+      </li>
+      {{/if}}
   </ul>
   </div>
 </nav>

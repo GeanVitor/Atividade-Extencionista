@@ -4,13 +4,13 @@
 
 {{/each}}
 <h3>Nova categoria</h3>
-<div class="card">
-    <div class="card-body">
+<div class="card bg-dark" style="color: white;">
+    <div class="card-body bg-dark">
         <form action="/admin/categorias/nova" method="POST">
-    <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="Nome da categorias" class="form-control">
-    <label for="slug">slug:</label>
-        <input type="text" id="slug" name="slug" placeholder="slug da categoria" class="form-control">
+    <label for="nome" style="color: white;">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Nome da categorias" class="form-control bg-dark" style="color: white;">
+    <label for="slug" style="color: white;">slug:</label>
+        <input type="text" id="slug" name="slug" placeholder="slug da categoria" class="form-control bg-dark" style="color: white;">
         <br>
     <button type="submit" class="btn btn-success">Criar categoria</button>
     </div>

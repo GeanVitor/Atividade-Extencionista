@@ -7,8 +7,17 @@ require("../models/Postagem");
 const Postagem = mongoose.model("postagens");
 const {isAdmin} = require("../helpers/isAdmin");
 
-router.get('/', isAdmin, (req, res) => {
-    res.render("admin/index");
+
+//Rota para exibir todos os usários
+router.get('/admin', isAdmin, (req, res) => {
+    router.get('/categorias', isAdmin, (req, res) => {
+        Categoria.find().sort({ date: 'desc' }).then((categorias) => {
+            res.render('admin/index', { categorias: categorias });
+        }).catch((error) => {
+            req.flash("errorr_msg", "Houve um error ao listar as categorias!");
+            res.redirect('/admin');
+        });
+    });
 });
 
 

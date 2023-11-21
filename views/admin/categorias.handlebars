@@ -3,15 +3,15 @@
 <a href="/admin/categorias/add"><button class="btn btn-success">Nova categoria</button></a>
 
 {{#each categorias}}
-    <div class="card mt-4">
+    <div class="card mt-4 bg-dark">
         <div class="card-body">
-            <h4>{{nome}}</h4>
-            <small>Descrisão: {{slug}}</small><br>
-            <small>Data de criação: {{date}}</small>
+            <h4 style="color: white;">{{nome}}</h4>
+            <small style="color: white;">Descrisão: {{slug}}</small><br>
+            <small style="color: white;">Data de criação: {{date}}</small>
             <br>
             <a href="/admin/categorias/edit/{{_id}}" ><button type="submit" class="btn btn-primary mt-4">Editar Categoria</button></a>
             <form action="/admin/categorias/deletar" method="POST">
-                <input type="hidden" name="id" value="{{_id}}">
+                <input type="hidden" name="id" value="{{_id}}" style="color: white;">
                 <button type="submit" class="btn btn-danger mt-2">Apagar Categoria</button>
             </form>
         </div>

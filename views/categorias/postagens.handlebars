@@ -1,6 +1,6 @@
 <h1>{{categoria.nome}}</h1>
 {{#each postagens}}
-<div class="card mt-3">
+<div class="card mt-3 bg-dark" style="color: white;">
     <div class="card-body">
         <h3>{{titulo}}</h3>
         <p>{{descricao}}</p>
@@ -10,5 +10,5 @@
     </div>
 </div>
 {{else}}
-    <h5>Nenhuma postagem</h5>
+    <h5 style="color: white;">Nenhuma postagem</h5>
 {{/each}}
