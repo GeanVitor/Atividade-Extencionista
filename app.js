@@ -59,6 +59,7 @@
         }).catch((erro) => {
             console.log("A conexão falhou: " + erro);
         });
+        
     // Public
         app.use(express.static(path.join(__dirname, 'public')));
 

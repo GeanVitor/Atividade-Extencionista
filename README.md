@@ -13,4 +13,16 @@
       npm install mongoose
 
 ## Aviso
-e necessario que o mongoDb estaja instalado na maquina para o pleno funcionamento da aplicação
+E necessario que o mongoDb estaja instalado na maquina para o pleno funcionamento da aplicação
+Caso tenha o mongoDb configure-o com as informações do seu servidor
+   Exemplo: 
+      //Mongoose
+        mongoose.Promise = global.Promise;
+        mongoose.connect('mongodb://porta_configurada/nome_do_banco_de_dados').then(() => {
+            console.log("Conectado ao mongo!");
+        }).catch((erro) => {
+            console.log("A conexão falhou: " + erro);
+        });
+
+   ## obs:
+      A porta padrão do mongoDb constuma ser 127.0.0.1.
