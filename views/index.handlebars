@@ -63,13 +63,13 @@
     </button>
 </div>
 <hr> 
-<h2>Postagens recentes</h2>
+<h2 style="color: white;">Postagens recentes</h2>
 
 {{#each postagens}}
-<div class="card mt-3 bg-dark" style="color: white; background-color: #242420"">
+<div class="card mt-3 bg-black" style="color: white;">
     <div class="card-body">
-        <h3>{{titulo}}</h3>
-        <p>{{descricao}}</p>
+        <h3 style="color: white;">{{titulo}}</h3>
+        <p style="color: white;">{{descricao}}</p>
         <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais...</button></a>
         <hr>
         <small>Categoria: {{categoria.nome}}</small><br>
@@ -79,3 +79,43 @@
 {{else}}
 <h5>Nenhuma postagem</h5>
 {{/each}}
+<h2 class="mt-3">Sobre Nós</h2>
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+  <div class="col">
+    <div class="card h-100 bg-black">
+      <img src="https://images.unsplash.com/photo-1457530378978-8bac673b8062?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top  g-col-6 g-col-md-4" alt="..." style="height: 300px">
+      <div class="card-body">
+        <h5 class="card-title">Empresa com foco em preservação!</h5>
+        <p class="card-text">Estamos focados em preservar ao maxímo o meio ambiente,
+                            conservação da água e preservação da biodiversidade. 
+                            A empresa que a educação é crucial para construir uma base 
+                            sólida de defensores do meio ambiente.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 bg-black">
+      <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1913&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top  g-col-6 g-col-md-4" alt="..." style="height: 300px">
+      <div class="card-body">
+        <h5 class="card-title">Tecnologias Sustentáveis</h5>
+        <p class="card-text">Utilizando métodos avançados, 
+                            como Internet das Coisas (IoT) e 
+                            inteligência artificial, a empresa 
+                            otimiza o uso de recursos naturais e 
+                            reduz o impacto ambiental</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 bg-black">
+      <img src="https://images.unsplash.com/photo-1597868165956-03a6827955b1?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top  g-col-6 g-col-md-4" alt="..." style="height: 300px">
+      <div class="card-body">
+        <h5 class="card-title">Compromisso com a Neutralidade de Carbono:</h5>
+        <p class="card-text">Adotando fontes de energia renovável, 
+                            reduzindo emissões de carbono e participando de projetos de 
+                            reflorestamento, a empresa busca equilibrar suas emissões de carbono.</p>
+      </div>
+    </div>
+  </div>
+</div>

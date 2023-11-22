@@ -109,7 +109,7 @@ router.get('/admin', isAdmin, (req, res) => {
 // Config Postagens
     // Rota para renderizar a pagina de postagens
     router.get("/postagens",  isAdmin, (req, res) => {
-        Postagem.find().populate("categoria").sort({data: "desc"}).then((postagens) => {
+        Postagem.find().populate("categoria").sort({data: "desc"}).limit(5).then((postagens) => {
             res.render("admin/postagens", {postagens: postagens});
         }).catch((error) => {
             req.flash("error_msg", "Houve um erro ao listar as postagens! " + error);

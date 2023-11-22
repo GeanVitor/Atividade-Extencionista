@@ -65,6 +65,16 @@ router.post("/registros", (req, res) => {
     }
 });
 
+// Rota para a pagina de fale consosco
+router.get("/sac", (req, res) => {
+    try {
+        res.render("usuarios/sac");
+    } catch (error) {
+        req.flash("error_msg", "A página não pode ser encontrada.");
+        res.redirect("/");
+    }
+});
+
 // Rota de loguin
 router.get("/loguin" , (req, res) => {
     res.render("usuarios/loguin");
@@ -73,7 +83,7 @@ router.get("/loguin" , (req, res) => {
 router.post("/loguin", (req, res , next) => {
     passport.authenticate("local", {
         successRedirect: "/",
-        failureRedirect: "/usuarios/registros",
+        failureRedirect: "usuarios/registros",
         failureFlash: true
     })(req, res, next)
 })

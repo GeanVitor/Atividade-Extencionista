@@ -3,20 +3,20 @@
 {{else}}
 
 {{/each}}
-<div class="card   bg-dark">
+<div class="card   bg-black">
     <div class="card-body" style="color: white;">
         <h4>Nova Postagem</h4>
         <form action="/admin/postagens/nova" method="POST">
             <label for="titulo" style="color: white;">Título: </label>
-            <input type="text" name="titulo" class="form-control bg-dark" style="color: white;">
+            <input type="text" name="titulo" class="form-control bg-black" style="color: white;">
             <label for="slug" style="color: white;">Slug: </label>
-            <input type="text" name="slug" class="form-control bg-dark" style="color: white;">
+            <input type="text" name="slug" class="form-control bg-black" style="color: white;">
             <label for="descricao" style="color: white;">Descrição: </label>
-            <input type="text" name="descricao" class="form-control bg-dark" style="color: white;">
+            <input type="text" name="descricao" class="form-control bg-black" style="color: white;">
             <label for="conteudo" style="color: white;">Conteúdo: </label>
-            <textarea name="conteudo" class="form-control bg-dark" style="color: white;"></textarea>
+            <textarea name="conteudo" class="form-control bg-black" style="color: white;"></textarea>
             <label for="categoria" style="color: white;">Categoria: </label>
-            <select name="categoria" class="form-control bg-dark" style="color: white;">
+            <select name="categoria" class="form-control bg-black" style="color: white;">
                 {{#each categorias}}
                     <option value="{{_id}}" style="color: white;">{{nome}}</option>
                 {{else}}
