@@ -1,12 +1,25 @@
-<h4>Loguin:</h4>
-<div class="card bg-black">
-    <div class="card-body">
-        <form action="/usuarios/loguin" method="POST" >
-            <label style="color: white;" for="email">Email: </label>
-                <input type="email" class="form-control bg-dark" style="color: white;" name="email">
-            <label style="color: white;" for="senha">Senha: </label>
-                <input type="password" class="form-control bg-dark" style="color: white;" name="senha">
-            <button class="btn btn-success mt-3" type="submit">Entrar</button>
+<img src="https://storyset.com/illustration/data-extraction/amico/animate?share=74728"/>
+
+<div class="d-flex align-items-center py-4">
+    <div class="w-100 m-auto" style="
+        max-width: 350px;
+        padding: 1rem;
+    ">
+        <form action="/usuarios/loguin" method="POST">
+            <h1 class="h3 mb-3 fw-normal">Please sign-in</h1>
+            <div class="form-floating">
+                <input type="email" class="form-control bg-black mb-3" id="floatingInput" placeholder="youremail@gmail.com" name="email" />
+                <label for="floatingInput email">E-mail:</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control bg-black" id="floatingInput" name="senha" />
+                <label for="floatingInput senha">Senha:</label>
+            </div>
+            <div class="form-check text-start my-3">
+                <input type="checkbox" class="form-check-input" id="flexCheckDefault" />
+                <label for="" class="form-check-label">Remember me</label>
+            </div>
+            <button class="btn btn-primary w-100" type="submit">Sign-in</button>
         </form>
     </div>
 </div>

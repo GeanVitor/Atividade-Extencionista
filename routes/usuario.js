@@ -66,6 +66,11 @@ router.post("/registros", (req, res) => {
     }
 });
 
+// Rota para a pagina de downloads
+router.get('/download', (req, res) => {
+    res.render("usuarios/downloads");
+})
+
 // Rota para a pagina de monitoramento
 router.get("/monitor", async (req, res) => {
     try {
@@ -105,7 +110,7 @@ router.get("/loguin", (req, res) => {
 router.post("/loguin", (req, res, next) => {
     passport.authenticate("local", {
         successRedirect: "/",
-        failureRedirect: "usuarios/registros",
+        failureRedirect: "loguin",
         failureFlash: true
     })(req, res, next)
 })

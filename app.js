@@ -66,7 +66,7 @@
     // Rotas
         // Rota da pagina principal
         app.get('/', (req, res) => {
-            Postagem.find().populate("categoria").sort({data: "desc"}).then((postagens) => {
+            Postagem.find().populate("categoria").limit(3).sort({data: "desc"}).then((postagens) => {
                 res.render("index", {postagens: postagens});
             }).catch((error) => {
                 req.flash("error_msg", "Houve um erro ao listar as postagens: " + error);

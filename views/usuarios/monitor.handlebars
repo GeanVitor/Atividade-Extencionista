@@ -1,12 +1,14 @@
 <h1>Monitoramento de Queimadas</h1>
 
-<div id="dados-queimadas">
-    <pre>
+<div class="card">
+    <div class="card-body">
+        <pre>
         {{#each dadosQueimadas.features}}
             <p>Latitude: {{geometry.coordinates.[1]}}</p>
             <p>Longitude: {{geometry.coordinates.[0]}}</p>
             <p>Data: {{properties.date}}</p>
             <hr>
         {{/each}}
-    </pre>
+        </pre>
+    </div>
 </div>
